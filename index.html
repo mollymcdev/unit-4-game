@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Collector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+
+</head>
+
+<body>
+
+
+    <h1 id="title"></h1>
+    <p id="instructions"></p>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header" style="text-align:center;">
+                        Match this Number!
+                    </div>
+                    <div class="card-body">
+                        <p id="computerNumber" class="card-text" style="text-align:center;"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id ="crystals" class="row">
+            <div class="col-md-3">
+                <img id="crystalOneImage" src="assets/images/crystal_one.jpg" width="200">
+            </div>
+            <div class="col-md-3">
+                <img id="crystalTwoImage" src="assets/images/crystal_two.jpeg" width="200">
+            </div>
+            <div class="col-md-3">
+                <img id="crystalThreeImage" src="assets/images/crystal_three.jpeg" width="200">
+            </div>
+            <div class="col-md-3">
+                <img id="crystalFourImage" src="assets/images/crystal_four.jpg" width="200" height="150">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <p id = "wins"></p>
+            </div>
+            <div class="col-md-6">
+                <div id ="score" class="card">
+                    <div class="card-body">
+                        <h5 id ="scoreTitle">Your Score</h5>
+                        <p id="userScore">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <p id = "losses"></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

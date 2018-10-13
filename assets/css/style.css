@@ -1,0 +1,50 @@
+
+body {
+    background: url(../images/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#heading {
+    background-color: none;
+}
+
+#title {
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 50px;
+    color: #fff;
+    font-family: 'K2D', sans-serif;
+}
+
+.card-header {
+    font-family: 'K2D', sans-serif;
+}
+
+#computerNumber {
+    font-family: 'K2D', sans-serif;
+}
+
+#crystals {
+    padding: 40px 0px 40px 0px;
+   
+}
+
+#score {
+    font-family: 'K2D', sans-serif;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#wins {
+    font-family: 'K2D', sans-serif;
+    color: #fff;
+}
+
+#losses {
+    font-family: 'K2D', sans-serif;
+    color: #fff;
+    margin-left: 130px;
+}
