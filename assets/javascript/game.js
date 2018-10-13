@@ -1,71 +1,96 @@
 
-var numToMatch;
-
-var winsCount = 0;
-var lossesCount = 0;
-
-
-var crystalOne = $("#crystalOneImage");
-var crystalTwo = $("#crystalTwoImage");
-var crystalThree = $("#crystalThreeImage");
-var crystalFour = $("#crystalFourImage");
-
-var crystalArray = [crystalOne, crystalTwo, crystalThree, crystalFour];
-
-var userScore = $("#userScore");
-
-
-
-
 $(document).ready(function () {
+    //variable to store the number the user has to match
+    var numToMatch;
+
+    //variables to store the wins, losses, and user score
+    var winsCount = 0;
+    var lossesCount = 0;
+    var score = 0;
+
+    var crystalOneValue;
+    var crystalTwoValue;
+    var crystalThreeValue;
+    var crystalFourValue;
+
+    var currentScore = 0;
 
     $("#title").html("<h1>The Crystal Collector</h1>")
-   
 
     resetGame();
 
-//assigns a random number to crystal image when clicked
-
-    $("#crystals").on("click", function() {
-
-     for (var i = 0; i < crystalArray.length; i++) {
-       
-       var crystalValue = (Math.floor(Math.random() * (11) + 1));
-
-       $("#userScore").html(crystalValue);
-        
-    };
-
-    });
-
-
-//game logic
-
-    if (userScore === numToMatch) {
-        winsCount++
-        resetGame();
-    }
-
-    else if (userScore > numToMatch) {
-        lossesCount++
-        resetGame;
-    }
+    //displays wins and losses 
+    var winsElement = $("#wins");
+    winsElement.html("Wins:" + winsCount);
+    var lossesElement = $("#losses");
+    lossesElement.html("Losses:" + lossesCount);
 
 
     function resetGame() {
-        winsCount=0;
-        lossesCount=0;
+
+        crystalOneValue = (Math.floor(Math.random() * (11) + 1));
+        crystalTwoValue = (Math.floor(Math.random() * (11) + 1));
+        crystalThreeValue = (Math.floor(Math.random() * (11) + 1));
+        crystalFourValue = (Math.floor(Math.random() * (11) + 1));
+
         numToMatch = (Math.floor(Math.random() * (40) + 20));
         $("#computerNumber").html(numToMatch);
         console.log(numToMatch);
     }
-    
 
-// tracks wins and losses
-var winsElement = $("#wins");
-    winsElement.text("Wins: " + winsCount);
-var lossesElement = $("#losses");
-    lossesElement.text("Losses: " + lossesCount);
+
+
+    //click handlers to increase the score with the value of the crystal clicked
+
+    $("#crystalOneImage").on("click", function () {
+        console.log(crystalOneValue);
+        score = score + crystalOneValue;
+        $("#userScore").html(score);
+
+        if(score === numToMatch) {
+            winsCount++;
+        } else if (score > numToMatch) {
+            lossesCount++;
+        }
+    });
+
+    $("#crystalTwoImage").on("click", function () {
+        console.log(crystalTwoValue)
+        score += crystalTwoValue;
+        $("#userScore").html(score);
+
+        if(score === numToMatch) {
+            winsCount++;
+        } else if (score > numToMatch) {
+            lossesCount++;
+        }
+    });
+
+    $("#crystalThreeImage").on("click", function () {
+        console.log(crystalThreeValue)
+        score += crystalThreeValue;
+        $("#userScore").html(score);
+
+        if(score === numToMatch) {
+            winsCount++;
+        } else if (score > numToMatch) {
+            lossesCount++;
+        }
+    });
+
+    $("#crystalFourImage").on("click", function () {
+        console.log(crystalFourValue)
+        score += crystalFourValue;
+        $("#userScore").html(score);
+
+        if(score === numToMatch) {
+            winsCount++;
+        } else if (score > numToMatch) {
+            lossesCount++;
+        }
+    });
+
+    console.log(score);
 
 });
 
