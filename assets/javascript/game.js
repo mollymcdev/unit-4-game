@@ -40,6 +40,7 @@ $(document).ready(function () {
 
 
 
+
     //click handlers to increase the score with the value of the crystal clicked
 
     $("#crystalOneImage").on("click", function () {
@@ -47,11 +48,15 @@ $(document).ready(function () {
         score = score + crystalOneValue;
         $("#userScore").html(score);
 
-        if(score === numToMatch) {
+       if(score === numToMatch) {
             winsCount++;
+            resetGame();
         } else if (score > numToMatch) {
             lossesCount++;
+            resetGame();
         }
+        
+
     });
 
     $("#crystalTwoImage").on("click", function () {
