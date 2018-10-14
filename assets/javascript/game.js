@@ -48,14 +48,14 @@ $(document).ready(function () {
         score = score + crystalOneValue;
         $("#userScore").html(score);
 
-       if(score === numToMatch) {
+        if (score === numToMatch) {
             winsCount++;
             resetGame();
         } else if (score > numToMatch) {
             lossesCount++;
             resetGame();
         }
-        
+
 
     });
 
@@ -64,7 +64,7 @@ $(document).ready(function () {
         score += crystalTwoValue;
         $("#userScore").html(score);
 
-        if(score === numToMatch) {
+        if (score === numToMatch) {
             winsCount++;
         } else if (score > numToMatch) {
             lossesCount++;
@@ -76,7 +76,7 @@ $(document).ready(function () {
         score += crystalThreeValue;
         $("#userScore").html(score);
 
-        if(score === numToMatch) {
+        if (score === numToMatch) {
             winsCount++;
         } else if (score > numToMatch) {
             lossesCount++;
@@ -88,7 +88,7 @@ $(document).ready(function () {
         score += crystalFourValue;
         $("#userScore").html(score);
 
-        if(score === numToMatch) {
+        if (score === numToMatch) {
             winsCount++;
         } else if (score > numToMatch) {
             lossesCount++;
